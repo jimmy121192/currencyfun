@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Fun</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' id='icons-css-css'  href='https://www.bankofcanada.ca/wp-content/themes/ews-build/css/icons.css?dts=20180426200748' type='text/css' media='screen' />
+<link rel='stylesheet' id='all-css-css'  href='https://www.bankofcanada.ca/wp-content/themes/ews-build/css/all.css?dts=20180426200748' type='text/css' media='screen' />
+<link rel='stylesheet' id='parent-print-css-css'  href='https://www.bankofcanada.ca/wp-content/themes/parent-build/css/print.css?dts=20180426200748' type='text/css' media='print' />
+<link rel='stylesheet' id='print-css-css'  href='https://www.bankofcanada.ca/wp-content/themes/ews-build/css/print.css?dts=20180426200748' type='text/css' media='print' />
+<link rel='stylesheet' id='kohana_datepicker_css-css'  href='https://www.bankofcanada.ca/wp-content/themes/ews-build/css/datepicker/datepicker.css?dts=20180426200748' type='text/css' media='screen' />
+<link rel='stylesheet' id='carrington-business-css'  href='https://www.bankofcanada.ca/wp-content/themes/ews-build/style.css?dts=20180426200748' type='text/css' media='screen' />
+<link rel='stylesheet' id='fancybox-css'  href='https://www.bankofcanada.ca/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.5.pack.css?dts=20180426200748' type='text/css' media='screen' />
+
+  
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  
+  <div id="header"></div>
+
+<br>
+<br>
+    <div id="controls">
+    <button id="history">Historic Lookup</button>
+    <button id="bar">Exchange Rates Chart</button>
+    <button id="advise">Financial Advisor</button>
+    <button id="convert">Currency Converter</button>
+  </div>
+  <div id="wrapper" class="wrapper">
+  <p class="instructions">Enter any numeric amount and click on the button</p>
+  <input type="number" min = '0'  class = 'amount' id='curr_amount' placeholder='Amount to convert' />
+  <ul class='currencies'>
+
+  <!--   <li class='EUR'>Euro(EUR)</li>
+    <li class='USD'>US Dollar(USD)</li>
+    <li class='GBP'>Great Britain Pound(GBP)</li>
+    <li class='JPY'>Japanese Yen(JPY)</li>
+    <li class='AUD'>Australian Dollar(AUD)</li>
+    <li class='CHF'>Swiss Franc(CHF)</li>
+    <li class='VND'>Vietnamese Dong(VND)</li> -->
+    <li class='CAD'>Canadian Dollar(CAD)</li>
+  </ul>
+  
+  <ul class="results">
+    <li class='EUR'><span class="name">Euro</span><span class="iso">EUR</span><span class="result" id="EUR">0</span></li>
+    <li class='USD'><span class="name">US Dollar</span><span class="iso">USD</span><span class="result" id="USD">0</span></li>
+    <li class='GBP'><span class="name">Great Britain Pound</span><span class="iso">GBP</span><span class="result" id="GBP">0</span></li>
+    <li class='JPY'><span class="name">Japanese Yen</span><span class="iso">JPY</span><span class="result" id="JPY">0</span></li>
+    <li class='AUD'><span class="name">Australian Dollar</span><span class="iso">AUD</span><span class="result" id="AUD">0</span></li>
+    <li class='CHF'><span class="name">Swiss Franc</span><span class="iso">CHF</span><span class="result" id="CHF">0</span></li>
+    <li class='VND'><span class="name">Vietnamese Dong</span><span class="iso">VND</span><span class="result" id="VND">0</span></li>
+    <!-- <li class='CAD'><span class="name">Canadian Dollar</span><span class="iso">CAD</span><span class="result">0</span></li> -->
+  </ul>
+  <p class="warning"><strong>Please note:</strong> The exchange rates given are 'bank rates'. High street rates may be subject to commission</p>
+ 
+  </div>
+ <div id="table" class="table-responsive">
+    <table class="table table-bordered table-striped table-hover boc-table--sticky-header">
+        <thead>
+            <tr>
+                <th>Currency</th><th>2018-05-16</th><th>2018-05-17</th><th>2018-05-18</th><th>2018-05-19</th><th>2018-05-20</th>            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Australian dollar</td><td>0.9639</td><td>0.9621</td><td>0.9617</td><td>0.9616</td><td>0.9670</td></tr><td>Chinese renminbi</td><td>0.2015</td><td>0.2019</td><td>0.2010</td><td>0.2010</td><td>0.2019</td></tr><tr><td>European euro</td><td>1.5289</td><td>1.5262</td><td>1.5110</td><td>1.5103</td><td>1.5163</td></tr><tr><td>Hong Kong dollar</td><td>0.1627</td><td>0.1640</td><td>0.1632</td><td>0.1631</td><td>0.1641</td></tr><tr><td>Indian rupee</td><td>0.01891</td><td>0.01891</td><td>0.01890</td><td>0.01889</td><td>0.01894</td></tr><tr><td>Japanese yen</td><td>0.01166</td><td>0.01167</td><td>0.01162</td><td>0.01156</td><td>0.01163</td></tr><tr><td>Mexican peso</td><td>0.06551</td><td>0.06520</td><td>0.06510</td><td>0.06498</td><td>0.06468</td></tr><tr><td>Russian ruble</td><td>0.02070</td><td>0.02062</td><td>0.02066</td><td>0.02064</td><td>0.02066</td></tr><tr><tr><td>Singapore dollar</td><td>0.9580</td><td>0.9584</td><td>0.9554</td><td>0.9536</td><td>0.9587</td></tr><tr><td>South Korean won</td><td>0.001194</td><td>0.001194</td><td>0.001188</td><td>0.001183</td><td>0.001190</td></tr><tr><td>Swiss franc</td><td>1.2797</td><td>1.2853</td><td>1.2804</td><td>1.2779</td><td>1.2904</td></tr><tr><td>Taiwanese dollar</td><td>0.04289</td><td>0.04303</td><td>0.04288</td><td>0.04277</td><td>0.04300</td></tr><tr><td>Thai baht</td><td>0.04011</td><td>0.04009</td><td>0.03996</td><td>0.03988</td><td>0.04000</td></tr><tr><td>UK pound sterling</td><td>1.7350</td><td>1.7383</td><td>1.7277</td><td>1.7293</td><td>1.7359</td></tr><tr><td>US dollar</td><td>1.2775</td><td>1.2876</td><td>1.2809</td><td>1.2801</td><td>1.2880</td></tr><tr><td>Vietnamese dong</td><td>0.000056</td><td>0.000057</td><td>0.000056</td><td>0.000056</td><td>0.000057</td></tr>        </tbody>
+    </table>
+</div>
+   <div id="container">
+    <canvas id="myChart"></canvas>
+    <div id="adv"></div>
+  </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script  src="js/index.js"></script>
+	
+
+
+
+</body>
+
+</html>
